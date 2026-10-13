@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jepyll"
+version = "0.1.0"
+description = "A small, Jekyll-compatible static site generator written in Python"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Zhiwei Li" }]
+keywords = ["static-site-generator", "jekyll", "blog", "markdown", "liquid"]
+dependencies = [
+    "PyYAML>=6.0",
+    "Markdown>=3.4",
+    "Pygments>=2.14",
+]
+
+[project.optional-dependencies]
+sass = ["libsass>=0.22"]
+dev = ["pytest>=7"]
+
+[project.scripts]
+jepyll = "jepyll.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["jepyll*"]
+
+[tool.setuptools.package-data]
+jepyll = ["data/themes/*/*.scss", "data/themes/*/*/*.scss"]

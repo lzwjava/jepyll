@@ -1,0 +1,13 @@
+<ul class="post-list">
+  {% assign lang_path = '_' | append: 'posts' | append: '/' | append: include.lang | append: '/' %}
+  {% for post in site.posts %}
+    {% if post.path contains lang_path %}
+  <li class="item">
+    <a href="{{ post.url }}">
+      <span class="date">{{ post.date | date: "%Y.%m.%d" }}</span>
+      <span class="title">{{ post.title }}</span>
+    </a>
+  </li>
+    {% endif %}
+  {% endfor %}
+</ul>

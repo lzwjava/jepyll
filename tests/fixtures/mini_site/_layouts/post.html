@@ -1,0 +1,19 @@
+---
+layout: default
+---
+{% include header.html %}
+<main class="post">
+  {% assign current_lang = page.path | split: '-' | last | split: '.' | first %}
+  <h1>{{ page.title }} (lang: {{ current_lang }})</h1>
+  {% case current_lang %}
+    {% when "en" %}
+      <p class="lang">English</p>
+    {% when "zh" %}
+      <p class="lang">中文</p>
+    {% else %}
+      <p class="lang">unknown</p>
+  {% endcase %}
+  <time>{{ page.date | date: "%Y.%m.%d" }}</time>
+  {{ content }}
+</main>
+{% include footer.html %}

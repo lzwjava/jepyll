@@ -1,0 +1,8 @@
+<header class="site-header">
+  <h3>{{ page.title | default: site.title }}</h3>
+  <p>{{ page.description | default: site.description }}</p>
+  <nav>
+    <a href="{{ '/' | relative_url }}">Home</a>
+    <a href="{{ '/notes-en' | relative_url }}">Notes</a>
+  </nav>
+</header>

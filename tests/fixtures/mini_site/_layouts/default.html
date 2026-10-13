@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en-US' }}">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+  {% seo %}
+  <link rel="stylesheet" href="/assets/css/style.css">
+  {% if site.google_analytics %}
+  <script>gtag('config', '{{ site.google_analytics }}');</script>
+  {% endif %}
+</head>
+<body>
+{{ content }}
+</body>
+</html>

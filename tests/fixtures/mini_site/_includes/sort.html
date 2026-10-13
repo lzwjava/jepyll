@@ -1,0 +1,5 @@
+<div class="sort">
+  <span>Page Views <a href="/analytics">~{{ site.monthly_page_views }}</a></span>
+  {% assign type = include.type | default: "notes" %}
+  <span class="count">{{ site[type].size }} {{ type }}</span>
+</div>

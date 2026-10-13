@@ -1,0 +1,31 @@
+title: Mini Site
+email: test@example.com
+description: >-
+  A tiny fixture site
+baseurl: ""
+url: "https://example.com"
+author:
+  name: Tester
+twitter:
+  username: tester
+  card: summary
+google_analytics: "G-TEST"
+permalink: /:title
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+exclude:
+  - Gemfile
+  - scripts
+collections:
+  notes:
+    output: true
+    permalink: /notes/:path/
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: mathjax
+timezone: Asia/Shanghai
+starting_year: 2020
+release_time: 2025-01-01 00:00:00
+monthly_page_views: 42

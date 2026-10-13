@@ -1,0 +1,14 @@
+---
+# Jekyll style front matter is required for SCSS files
+---
+
+$brand: #157878;
+
+@import "variables";
+
+body {
+  color: $text-color;
+  .hero {
+    background-color: $brand;
+  }
+}
